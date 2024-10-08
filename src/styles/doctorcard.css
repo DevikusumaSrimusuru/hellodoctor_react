@@ -1,0 +1,103 @@
+/* doctorcard.css */
+
+/* Container for the cards */
+.doctor-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Individual card */
+.doctor-card {
+  width: calc(25% - 20px); /* 25% width with a small margin between cards */
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card-img img {
+  width: 100%;
+  height: auto;
+}
+
+.doctor-card-details {
+  padding: 20px;
+}
+
+.doctor-card-name {
+  margin: 0;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.doctor-card-specialization,
+.doctor-card-experience,
+.doctor-card-fees,
+.doctor-card-phone {
+  margin: 5px 0;
+}
+
+.doctor-card-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Adjust button width */
+}
+
+.doctor-card-btn:hover {
+  background-color: #45a049;
+}
+
+/* Styling for DoctorDetailsPopup component */
+.doctor-details-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-details-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 90%; /* Limit maximum width of popup */
+  overflow: auto; /* Add scrolling if content overflows */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .doctor-card {
+    width: calc(50% - 20px); /* 50% width for smaller screens */
+  }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+  .doctor-card {
+    width: calc(100% - 20px); /* 100% width for extra small screens */
+  }
+}
